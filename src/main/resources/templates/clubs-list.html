@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.thymeleaf.org ">
+<head>
+    <meta charset="UTF-8">
+    <title>Clubs List</title>
+</head>
+<body>
+<table border="2" style="border: bisque; border-radius: 5%">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Content</th>
+        <th>Created On</th>
+        <th>Updated On</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="club : ${clubs}">
+        <td th:text="${club.idClub}"></td>
+        <td th:text="${club.title}">Title</td>
+        <td th:text="${club.content}">Content</td>
+        <td th:text="${club.createdOn}">Created On</td>
+        <td th:text="${club.updatedOn}">Updated On</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
